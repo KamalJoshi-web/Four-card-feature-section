@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0rem;
+  
+}
+.head > h2{
+    font-weight: 400;
+    font-size: 2rem;
+    color: hsl(234, 12%, 34%);
+}
+
+.head > h1{
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: hsl(234, 12%, 34%);
+}
+
+.head > p{
+   margin-top: 1rem;
+    white-space: break-spaces;
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+}
+
+.grid-container{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'supervision team-builder calculator'
+        'supervision karma calculator';
+    gap: 2rem;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+
+
+.grid-items1{
+    grid-area: supervision;
+}
+.grid-items2{
+    grid-area: team-builder;
+}
+.grid-items3{
+    grid-area: karma;
+}
+.grid-items4{
+    grid-area: calculator;
+}
+/* Inside items styling */
+
+.line{
+    height: 0.2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+}
+.bg-color1{
+    background-color: hsl(180, 62%, 55%);
+}
+.bg-color2{
+    background-color: hsl(0, 78%, 62%);
+}
+.bg-color3{
+    background-color: hsl(34, 97%, 64%);
+}
+.bg-color4{
+    background-color: hsl(212, 86%, 64%);
+}
+.box-shadow{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+    min-height: 15rem;
+}
+
+.heading{
+    padding-left: 2rem;
+    color: hsl(234, 12%, 34%);
+}
+.para{
+    font-size: small;
+    padding: 0rem 2rem;
+    margin-top: 1rem;
+    color: hsl(229, 6%, 66%);
+}
+.item-logo{
+    display: block;
+    margin-left: auto;
+    padding: 3rem 1rem 2rem 0rem;
+}
+
+@media screen and (max-width:912px) {
+    .grid-container{
+        grid-template-areas: 
+        'supervision'
+        'team-builder'
+        'karma'
+        'calculator';
+        max-width: 90%;
+    }
+    .head > h1{
+        font-size: 1.6rem;
+    }
+    .head > h2{
+        font-size: 1.5rem;
+    }
+    .head > p{
+        padding: 0rem 1rem;
+        white-space: initial;
+    }
+}
+@media screen and (max-width:280px) {
+    .head > h2{
+        font-size: 1.2rem;
+    }
+    .head > h1{
+        font-size: 1.3rem;
+    }
+}
